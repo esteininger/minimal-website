@@ -17,9 +17,11 @@ def blog_redirect():
     return redirect("https://esteininger.medium.com/")
 
 # files
+
+
 @app.route('/map')
 def vanlife_map():
-    return redirect("map.html")
+    return render_template('map.html')
 
 
 if __name__ == '__main__':
