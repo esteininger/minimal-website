@@ -16,6 +16,11 @@ def home_page():
 def blog_redirect():
     return redirect("https://esteininger.medium.com/")
 
+# files
+@app.route('/map')
+def vanlife_map():
+    return redirect("map.html")
+
 
 if __name__ == '__main__':
     app.run(debug=True, port=5012)
