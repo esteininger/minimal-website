@@ -1,5 +1,7 @@
+import json
 from flask import Flask, render_template, request, jsonify, redirect
 import os
+from helpers import Medium
 
 
 app = Flask(__name__)
@@ -9,7 +11,9 @@ ROOT_PATH = os.path.dirname(os.path.abspath(__file__))
 
 @app.route('/')
 def home_page():
-    return render_template('index.html')
+    medium = Medium(username="esteininger")
+    posts = medium.get()
+    return render_template('index.html', posts=posts)
 
 
 @app.route('/txt')

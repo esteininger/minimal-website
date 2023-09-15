@@ -67,8 +67,7 @@
         ideation, and iteration.
       </p>
 
-      <p>I've worn many hats - engineer, product manager, sales leader, and startup builder. Despite
-        setbacks, I'll always be a builder.
+      <p>I've worn many hats - engineer, product manager, sales leader, and startup builder. I'll always be a builder.
       </p>
 
       <p>Recently, I launched <a href="https://www.mongodb.com/developer/author/ethan-steininger/">MongoDB's search
@@ -77,7 +76,7 @@
           single line of code</a>.
       </p>
 
-      <h3>Play</h3>
+      <h3>Balance 🧘🏼</h3>
 
       <p>I'm all about work/life balance and love exploring the great outdoors with <a
           href="https://www.instagram.com/danywigglebutt/?hl=en">my pup</a> through mountain biking, backpacking,
@@ -92,7 +91,7 @@
           href="https://esteininger.medium.com/why-pursuing-a-bhag-is-worth-the-struggle-922401444f82">BHAG!</a></p>
 
 
-      <h3>Projects</h3>
+      <h3>Blueprints 🛠️</h3>
 
       <ul>
         <li>
@@ -121,22 +120,18 @@
         </li>
       </ul>
 
-      <h3>Writing</h3>
+      <h3>Blog 📝</h3>
+
 
       <ul>
-        <li><a
-            href="https://esteininger.medium.com/vertical-integration-is-key-to-winning-the-ai-race-44c8e4bd3b30">Vertical
-            Integration is Key to Winning the AI Race
-          </a> 01/23</li>
-        <li><a href="https://esteininger.medium.com/preparation-enables-surrender-a26e47fab858">Preparation enables
-            Surrender
-          </a> 02/21</li>
-        <li><a href="https://medium.com/hackernoon/should-you-treat-your-life-like-a-business-1dbf506a7919">Framework
-            for Self-Experimentation
-          </a> 02/18</li>
+        {% for post in posts %}
+        <li>
+          <a href="{{ post.link }}">{{ post.title }}</a> {{ post.pubDate }}
+        </li>
+        {% endfor %}
       </ul>
 
-      <h3>Talks & Interviews</h3>
+      <h3>Broadcasts 🎤</h3>
 
       <ul>
         <li><a href="https://www.youtube.com/watch?v=EDPk1umuge0">Ethan Steininger and the AI Landscape on the Weaviate
