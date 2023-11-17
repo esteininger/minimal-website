@@ -1,13 +1,13 @@
 body {
-  background-color: #fff;
+  background-color: #040D12;
   padding:50px;
   font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  color:#595959;
+  color:#ffffff;
   font-weight:400;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color:#222;
+  color:#040D12;
   margin:0 0 20px;
 }
 
@@ -25,33 +25,42 @@ h1 {
 }
 
 h2 {
-  color:#393939;
+  color:#ffffff;
   font-weight: 500;
 }
 
 h3, h4, h5, h6 {
-  color:#494949;
+  color:#ffffff;
   font-weight: 500;
 }
 
 a {
-  color:#39c;
-  text-decoration:none;
+  color:#95adc9;
+  text-decoration: underline dotted #95adc9;
+  text-underline-offset: 3px;
+  font-weight:500;
+}
+.bio a {
+  /* Reset or specify the styles you want specifically for .bio a */
+  color: inherit; /* This will make .bio a take the color of its parent */
+  text-decoration-line: none; /* Removes the underline */
+  text-underline-offset: inherit; /* Inherits this property from its parent */
+  font-weight: inherit; /* Inherits the font weight from its parent */
 }
 
 a:hover {
-  color:#069;
+  color:#95adc9;
 }
 
 a small {
   font-size:11px;
-  color:#777;
+  color:#ffffff;
   margin-top:-0.3em;
   display:block;
 }
 
 a:hover small {
-  color:#777;
+  color:#ffffff;
 }
 
 .wrapper {
@@ -60,7 +69,7 @@ a:hover small {
 }
 
 blockquote {
-  border-left:1px solid #e5e5e5;
+  border-left:1px solid #ffffff;
   margin:0;
   padding:0 0 0 20px;
   font-style:italic;
@@ -73,9 +82,9 @@ code, pre {
 
 pre {
   padding:8px 15px;
-  background: #f8f8f8;
+  background: #ffffff;
   border-radius:5px;
-  border:1px solid #e5e5e5;
+  border:1px solid #ffffff;
   overflow-x: auto;
 }
 
@@ -87,7 +96,7 @@ table {
 th, td {
   text-align:left;
   padding:5px 10px;
-  border-bottom:1px solid #e5e5e5;
+  border-bottom:1px solid #ffffff;
 }
 
 dt {
@@ -114,16 +123,16 @@ header ul {
   list-style:none;
   height:40px;
   padding:0;
-  background: #f4f4f4;
+  background: #ffffff;
   border-radius:5px;
-  border:1px solid #e0e0e0;
+  border:1px solid #ffffff;
   width:270px;
 }
 
 header li {
   width:89px;
   float:left;
-  border-right:1px solid #e0e0e0;
+  border-right:1px solid #ffffff;
   height:40px;
 }
 
@@ -138,7 +147,7 @@ header li:last-child a {
 header ul a {
   line-height:1;
   font-size:11px;
-  color:#999;
+  color:#ffffff;
   display:block;
   text-align:center;
   padding-top:6px;
@@ -146,11 +155,11 @@ header ul a {
 }
 
 header ul a:hover {
-  color:#999;
+  color:#ffffff;
 }
 
 header ul a:active {
-  background-color:#f0f0f0;
+  background-color:#ffffff;
 }
 
 strong {
