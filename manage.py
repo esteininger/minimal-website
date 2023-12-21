@@ -20,6 +20,11 @@ def home_page():
 def blog_redirect():
     return redirect("https://esteininger.medium.com/")
 
+
+@app.route('/meet')
+def calendar_redirect():
+    return redirect("https://calendly.com/nux")
+
 # files
 
 
