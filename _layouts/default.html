@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/static/css/styles.css">
     <link rel="stylesheet" href="/static/css/pygment_trac.css">
     <link rel="stylesheet" href="/static/external/font-awesome/css/font-awesome.min.css">
+
     <style>
         body {
             font-family: sans-serif;
@@ -29,14 +30,12 @@
             text-decoration: underline;
         }
 
-        .wrapper {
-            text-align: center;
-        }
-
         .breadcrumb {
             font-size: 0.9em;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             color: #777;
+            display: flex;
+            gap: 5px;
         }
 
         .breadcrumb a {
@@ -48,30 +47,14 @@
             text-decoration: underline;
         }
 
-        header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .propic img {
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px dotted #ffdeb9;
-        }
-
-        .bio a:not(:first-child) i {
-            font-size: 26px;
-            padding-left: 1rem;
+        .content-container {
+            text-align: left;
+            width: 100%;
         }
 
         h1 {
             font-size: 2em;
             margin-bottom: 10px;
-        }
-
-        article {
-            text-align: left;
-            margin-top: 20px;
         }
 
         footer {
@@ -85,23 +68,6 @@
 
 <body>
     <div class="wrapper">
-        <header>
-            <h1 class="propic">
-                <a href="/">
-                    <img src="/static/img/e.jpeg" width="200">
-                </a>
-            </h1>
-            <p class="bio">
-                <span>tikkun olam</span><br><br>
-                <a href="https://github.com/esteininger" target="_blank"><i class="fa fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/ethansteininger/" target="_blank"><i class="fa fa-linkedin"></i></a>
-                <a href="https://esteininger.medium.com/" target="_blank"><i class="fa fa-medium"></i></a>
-                <a href="https://twitter.com/ethansteininger" target="_blank"><i class="fa fa-twitter"></i></a>
-                <a href="https://instagram.com/ethan.codes" target="_blank"><i class="fa fa-instagram"></i></a>
-            </p>
-            <p><a href="https://github.com/esteininger/minimal-website">This Site's Code</a></p>
-        </header>
-
         <nav class="breadcrumb">
             <a href="/">Home</a>
             {% for part in page.url | split: "/" %}
@@ -111,15 +77,16 @@
             {% endfor %}
         </nav>
 
-        <article>
+        <div class="content-container">
             <h1>{{ page.title }}</h1>
             {{ content }}
-        </article>
+        </div>
 
         <footer>
             <p><small>me (at) ethan (dot) dev</small></p>
         </footer>
     </div>
+
     <script src="/static/js/scale.fix.js"></script>
 </body>
 
