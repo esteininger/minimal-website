@@ -1,10 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 700px;
+            margin: 40px auto;
+            line-height: 1.6;
+            padding: 0 15px;
+            color: #333;
+        }
+        a { color: #0077cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        header {
+            font-size: 0.9em;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        .breadcrumb {
+            font-size: 0.9em;
+            color: #777;
+        }
+        .breadcrumb a {
+            color: #777;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        article {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <header><h1>{{ page.title }}</h1></header>
-    <main>{{ content }}</main>
+
+<header>
+    <nav class="breadcrumb">
+        <a href="/">Home</a>
+        {% for part in page.url | split: "/" %}
+            {% if part != "" %}
+                / <a href="{{ part }}">{{ part | replace:'-',' ' | capitalize }}</a>
+            {% endif %}
+        {% endfor %}
+    </nav>
+</header>
+
+<article>
+    <h1>{{ page.title }}</h1>
+    {{ content }}
+</article>
+
 </body>
 </html>
